@@ -273,6 +273,7 @@ Authorization: Bearer {token}
 # Documentação de Testes Unitários para API de Despesas
 
 Este documento descreve os testes unitários para validar a funcionalidade de login de usuário e o comportamento correto das funcionalidades da API de despesas. Cada teste tem como objetivo verificar se o endpoint de login responde de maneira apropriada ao receber credenciais válidas, além de verificar se as ações sobre as despesas (como listar, acessar, criar, atualizar e excluir) estão funcionando conforme o esperado para o usuário autenticado e se as permissões estão corretamente configuradas. Os testes estão configurados para serem executados em uma instância independente do banco de dados SQLite.
+- Crie o arquivo "**database.sqlite**" dentro do diretório /database
 
 ## Documentação de Testes Unitários para Login de Usuário
 
