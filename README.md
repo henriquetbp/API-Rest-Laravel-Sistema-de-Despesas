@@ -324,9 +324,9 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
      - Status de resposta deve ser 200 (OK).
      - O número de despesas retornadas deve ser 10.
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->getJson('/api/expenses');
-     ```
+```php
+$response = $this->getJson('/api/expenses');
+```
 
 ### 2. **Testar Acesso a uma Despesa Específica**
    - **Método**: `test_user_can_access_expense`
@@ -337,9 +337,9 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 200 (OK).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->getJson('/api/expenses/10');
-     ```
+```php
+$response = $this->getJson('/api/expenses/10');
+```
 
 ### 3. **Testar Bloqueio de Acesso a Despesa de Outro Usuário**
    - **Método**: `test_block_expense_from_another_user`
@@ -350,9 +350,9 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 403 (Forbidden).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->getJson('/api/expenses/11');
-     ```
+```php
+$response = $this->getJson('/api/expenses/11');
+```
 
 ### 4. **Testar Criação de Despesa**
    - **Método**: `test_user_can_create_expense`
@@ -363,14 +363,14 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 200 (OK).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->postJson('/api/expenses', [
-         'description' => 'expense 1',
-         'value' => 100,
-         'date' => '2024-01-01',
-         'user_id' => $user->id
-     ]);
-     ```
+```php
+$response = $this->postJson('/api/expenses', [
+    'description' => 'expense 1',
+    'value' => 100,
+    'date' => '2024-01-01',
+    'user_id' => $user->id
+]);
+```
 
 ### 5. **Testar Bloqueio de Criação de Despesa para Outro Usuário**
    - **Método**: `test_block_create_expense_to_another_user`
@@ -381,14 +381,14 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 422 (Unprocessable Entity).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->postJson('/api/expenses', [
-         'description' => 'expense 1',
-         'value' => 100,
-         'date' => '2024-01-01',
-         'user_id' => 2
-     ]);
-     ```
+```php
+$response = $this->postJson('/api/expenses', [
+    'description' => 'expense 1',
+    'value' => 100,
+    'date' => '2024-01-01',
+    'user_id' => 2
+]);
+```
 
 ### 6. **Testar Atualização de Despesa**
    - **Método**: `test_user_can_update_expense`
@@ -399,13 +399,13 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 200 (OK).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->putJson('/api/expenses/1', [
-         'description' => 'expense 1 updated',
-         'value' => 200,
-         'date' => '2024-01-01',
-     ]);
-     ```
+```php
+$response = $this->putJson('/api/expenses/1', [
+    'description' => 'expense 1 updated',
+    'value' => 200,
+    'date' => '2024-01-01',
+]);
+```
 
 ### 7. **Testar Bloqueio de Atualização de Despesa de Outro Usuário**
    - **Método**: `test_block_update_expense_from_another_user`
@@ -416,13 +416,13 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 403 (Forbidden).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->putJson('/api/expenses/11', [
-         'description' => 'expense 1 updated',
-         'value' => 200,
-         'date' => '2024-01-01',
-     ]);
-     ```
+```php
+$response = $this->putJson('/api/expenses/11', [
+    'description' => 'expense 1 updated',
+    'value' => 200,
+    'date' => '2024-01-01',
+]);
+```
 
 ### 8. **Testar Exclusão de Despesa**
    - **Método**: `test_user_can_delete_expense`
@@ -433,9 +433,9 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 200 (OK).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->deleteJson('/api/expenses/1');
-     ```
+```php
+$response = $this->deleteJson('/api/expenses/1');
+```
 
 ### 9. **Testar Bloqueio de Exclusão de Despesa de Outro Usuário**
    - **Método**: `test_block_delete_expense_from_another_user`
@@ -446,9 +446,9 @@ Os testes estão localizados no arquivo `ExpensesAccessTest.php` e utilizam a cl
    - **Validações**:
      - Status de resposta deve ser 403 (Forbidden).
    - **Exemplo de Requisição**:
-     ```php
-     $response = $this->deleteJson('/api/expenses/11');
-     ```
+```php
+$response = $this->deleteJson('/api/expenses/11');
+```
 
 ## Considerações Finais
 
