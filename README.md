@@ -4,6 +4,7 @@ Este documento detalha o uso dos endpoints expostos pela API Rest de despesas. A
 
 ## Stack utilizada
 **Laravel**
+
 Foi utilizado o **Mailtrap** para testes de envio de notificação por e-mail em fila.
 
 ## Instalação - Rodando Localmente
@@ -14,9 +15,9 @@ git clone https://github.com/henriquetbp/onfly.git
 ```
 - Instale as dependências
 ```bash
-composer install
+composer update
 ```
-- Crie um novo schema e configure a conexão no arquivo .env
+- Crie um novo schema e configure a conexão utilizando o arquivo "**.env.example**"
 - Crie as tabelas
 ```bash
 php artisan migrate
@@ -26,6 +27,13 @@ php artisan migrate
 php artisan serve
 ```
 - Insira dados para testes nas tabelas **(opcional)**
+		- Usuários de teste: 
+	- Usuário ID: 1
+		- Email: test@example.com
+		- Senha: password
+	- Usuário ID: 2
+		- Email: user2@example.com
+		- Senha: password
 ```bash
 php artisan migrate --seed
 ```
