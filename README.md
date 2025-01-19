@@ -1,3 +1,5 @@
+# API RESTful de Despesas
+
 # Documentação de Uso da API de Despesas
 
 Este documento detalha o uso dos endpoints expostos pela API Rest de despesas. A API gerencia despesas e realiza operações CRUD (Criar, Ler, Atualizar, Deletar), além de fornecer endpoints para autenticação de usuários.
